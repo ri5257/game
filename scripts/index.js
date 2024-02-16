@@ -12,7 +12,17 @@
 
 // Another Way: Same Work
 //........................
-function play(){
+function continueGame() {
+  const alphabet =  getARandomAlphabet();
+  console.log('your random number is', alphabet);
+
+  const currentAlphabet =document.getElementById('current-alphabet');
+  currentAlphabet.innerText= alphabet;
+}
+
+
+function play() {
     hideElementByID('home-screen');
-    showElementByID('play-ground')
+    showElementByID('play-ground');
+    continueGame()
 }
