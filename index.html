@@ -23,16 +23,16 @@
 <body>
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home Screen -->
-        <section class="home text-white ">
+        <section id="home-screen" class=" text-white ">
             <div class=" min-h-screen flex flex-col items-center justify-center gap-10 ">
                 <h1 class="text-8xl font-extrabold">ALPHABET CLASH</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn w-28 font-bold">Play Now</button>
+                <button onclick="play()" class="btn w-28 font-bold">Play Now</button>
             </div>
 
         </section>
         <!-- Play-ground Screen -->
-        <section class="play-ground *:hidden">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col items-center gap-10 pt-16">
                 <!-- Art board Screen -->
                 <div
@@ -99,9 +99,10 @@
         </section>
         <!-- Score section -->
         <section class="score flex justify-center items-center min-h-screen hidden">
-            <div class="text-white text-center space-y-8 border-2 bg-gradient-to-r from-[#FFFFFF8F] via-[#98979700] to-[#FFFFFF33] px-12 py-11 rounded-2xl">
+            <div
+                class="text-white text-center space-y-8 border-2 bg-gradient-to-r from-[#FFFFFF8F] via-[#98979700] to-[#FFFFFF33] px-12 py-11 rounded-2xl">
                 <h1 class="text-8xl">
-                    <span class="font-extrabold">Score:</span> 
+                    <span class="font-extrabold">Score:</span>
                     <span>0</span>
                 </h1>
                 <button class="btn font-bold text-xl">Play Again</button>
@@ -109,6 +110,7 @@
             </div>
         </section>
     </main>
+    <script src="scripts/utility.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 
