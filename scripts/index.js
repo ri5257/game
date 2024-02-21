@@ -24,10 +24,25 @@ function handleKeyButtonPress(event) {
   
   if (playerPressedKey === expectedAlphabet) {
     console.log('correct');
+    removeBackgroundColor(expectedAlphabet);
+    const currentScore = document.getElementById('current-score');
+    const currentScoreText = currentScore.innerText;
+    const currentScoreNumber = parseInt(currentScoreText);
+    const newScore = currentScoreNumber + 1;
+    currentScore.innerText = newScore;
     continueGame();
   }
   else {
     console.log('wrong');
+    const currentLife = document.getElementById('current-life');
+    const currentLifeText = currentLife.innerText;
+    const currentLifeNumber = parseInt(currentLifeText);
+    const newLife = currentLifeNumber - 1;
+    currentLife.innerText = newLife;
+    if (newLife === 0) {
+      alert('Game Over');
+      location.reload();
+    }
   }
 }
 
